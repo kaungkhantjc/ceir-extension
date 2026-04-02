@@ -94,12 +94,14 @@ export default function ResultCard({ result, isDeviceInfoOpen, onToggleDeviceInf
             </dd>
           </div>
 
-          <div className="flex items-center justify-between">
-            <dt className="text-sm text-gray-500">စာရင်းသွင်းထားသောရက်</dt>
-            <dd className="text-sm font-medium text-gray-900">
-              {formatDate(result.networkDate)}
-            </dd>
-          </div>
+          {result.networkDate && (
+            <div className="flex items-center justify-between">
+              <dt className="text-sm text-gray-500">စာရင်းသွင်းထားသောရက်</dt>
+              <dd className="text-sm font-medium text-gray-900">
+                {formatDate(result.networkDate)}
+              </dd>
+            </div>
+          )}
         </dl>
 
         {/* Device Info (collapsible) */}
